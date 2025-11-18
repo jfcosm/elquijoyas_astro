@@ -1,7 +1,6 @@
 # Elqui Joyas - Sitio estático con Astro
 
-Sitio web estático para la joyería artesanal **Elqui Joyas**, creado con **Astro**, **Tailwind CSS** y componentes de **React**
-para las interacciones (botones flotantes).
+Sitio web estático para la joyería artesanal **Elqui Joyas**, creado con **Astro**, **Tailwind CSS** y componentes de **React** para las interacciones (botones flotantes).
 
 ## Requisitos
 
@@ -23,9 +22,7 @@ para las interacciones (botones flotantes).
 
 ## Despliegue en GitHub Pages
 
-1. Instala dependencias con `npm ci` (usa el `package-lock.json` incluido para builds reproducibles).
+1. Ejecuta `npm install`.
 2. Construye el sitio con `npm run build`.
-3. Si el sitio vive bajo `https://<usuario>.github.io/<repo>/`, ajusta en `astro.config.mjs` las propiedades:
-   - `site: "https://<usuario>.github.io/<repo>/"`
-   - `base: "/<repo>"`
-4. El workflow `deploy.yml` ya prepara Pages con `actions/configure-pages`, cachea npm y publica automáticamente la carpeta `dist/`.
+3. Publica la carpeta `dist/` en tu rama o flujo de GitHub Pages.
+4. Actualiza `site` en `astro.config.mjs` con la URL final del sitio.

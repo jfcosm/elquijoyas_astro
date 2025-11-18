@@ -46,7 +46,7 @@ export const jewels: Jewel[] = [
     name: 'Anillo Lunación',
     category: 'Anillo',
     description: 'Texturas lunares en plata ennegrecida con destellos dorados.',
-    image: 'images/jewels/anillo-luna.svg',
+    image: 'images/jewels/anillo-luna.jpeg',
     instagramUrl: 'https://instagram.com/elquijoyas/anillo-luna'
   },
   {

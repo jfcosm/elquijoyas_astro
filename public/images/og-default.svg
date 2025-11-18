@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdf9f3"/>
+      <stop offset="100%" stop-color="#e6d3c0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="40"/>
+  <text x="80" y="200" font-family="'Playfair Display', serif" font-size="64" fill="#1f1a17">Elqui Joyas</text>
+  <text x="80" y="270" font-family="'Work Sans', sans-serif" font-size="32" fill="#2f5c48">Joyería artesanal del Valle de Elqui</text>
+  <path d="M200 380c80-120 180-220 240-220s160 100 240 220c-80 120-180 220-240 220S280 500 200 380Z" stroke="#c6a067" stroke-width="18" fill="#fff9f1" opacity="0.8"/>
+  <circle cx="440" cy="360" r="62" fill="#2f5c48" opacity="0.85"/>
+  <circle cx="640" cy="430" r="26" fill="#d9876b"/>
+</svg>

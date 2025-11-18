@@ -21,23 +21,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
-        env:
-          ASTRO_SITE: https://elquijoyas.github.io/elquijoyas_astro
-          ASTRO_BASE: /elquijoyas_astro/
-        run: npm run build -- --site "$ASTRO_SITE" --base "$ASTRO_BASE"
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

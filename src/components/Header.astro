@@ -1,0 +1,33 @@
+---
+const links = [
+  { href: '#inicio', label: 'Inicio' },
+  { href: '#coleccion', label: 'Colección' },
+  { href: '#acerca', label: 'Acerca de' },
+  { href: '#contacto', label: 'Contacto' }
+];
+
+// Ajusta el número de WhatsApp en la variable phoneLink
+const phoneLink = 'https://wa.me/56912345678';
+---
+<header class="fixed top-0 inset-x-0 z-30 backdrop-blur-md bg-white/70 border-b border-white/40">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-2 group">
+      <div class="w-10 h-10 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-gold font-bold">
+        EJ
+      </div>
+      <div>
+        <p class="text-lg font-serif font-semibold leading-none">Elqui Joyas</p>
+        <p class="text-xs text-neutral-600">Arte en metal por Nicolás Cordero</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-6">
+      {links.map((link) => (
+        <a href={link.href} class="text-sm font-medium text-neutral-700 hover:text-gold transition">{link.label}</a>
+      ))}
+    </nav>
+    <a href={phoneLink} class="button-primary text-sm" target="_blank" rel="noopener noreferrer">
+      Escríbenos
+    </a>
+  </div>
+</header>
+<div class="h-20"></div>

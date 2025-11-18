@@ -4,7 +4,8 @@ import react from '@astrojs/react';
 
 // Configuración principal del proyecto Astro
 export default defineConfig({
-  site: 'https://elquijoyas.github.io/', // Ajusta esta URL cuando publiques en GitHub Pages
+  site: 'https://jfcosm.github.io/elquijoyas_astro/', // Ajusta esta URL cuando publiques en GitHub Pages
+  base: '/elquijoyas_astro/',
   integrations: [react(), tailwind({ applyBaseStyles: false })],
   output: 'static'
 });

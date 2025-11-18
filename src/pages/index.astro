@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import AboutSection from '../components/AboutSection.astro';
+import JewelsGrid from '../components/JewelsGrid.astro';
+import ValuesSection from '../components/ValuesSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton.tsx';
+import FloatingInstagramButton from '../components/FloatingInstagramButton.tsx';
+---
+<BaseLayout>
+  <Hero />
+  <AboutSection />
+  <JewelsGrid />
+  <ValuesSection />
+  <ContactSection />
+  <FloatingWhatsAppButton client:idle />
+  <FloatingInstagramButton client:idle />
+</BaseLayout>

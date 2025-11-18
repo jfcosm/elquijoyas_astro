@@ -1,0 +1,31 @@
+---
+import { jewels } from '../data/jewels';
+---
+<section id="coleccion" class="section-padding bg-white/70">
+  <div class="container mx-auto px-4 space-y-10">
+    <div class="space-y-3 text-center max-w-3xl mx-auto">
+      <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Colección de joyas</p>
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold text-neutral-900">Piezas que cuentan historias</h2>
+      <p class="text-neutral-700">Explora una selección de piezas creadas a mano. Cada diseño puede personalizarse y se envía con certificado de autenticidad.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {jewels.map((jewel) => (
+        <article class="card p-5 flex flex-col gap-4" key={jewel.id}>
+          <div class="aspect-square rounded-xl overflow-hidden border border-white/70">
+            <img src={jewel.image} alt={jewel.name} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="badge">{jewel.category}</span>
+            <a href={jewel.instagramUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gold hover:text-terracotta transition">
+              Ver en Instagram
+            </a>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-xl font-serif font-semibold text-neutral-900">{jewel.name}</h3>
+            <p class="text-neutral-700 leading-relaxed">{jewel.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

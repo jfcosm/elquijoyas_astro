@@ -7,7 +7,7 @@ interface Props {
 }
 
 const FloatingWhatsAppButton: React.FC<Props> = ({
-  phone = '56912345678',
+  phone = '56931983075',
   message = 'Hola, quiero saber más sobre las joyas Elqui Joyas'
 }) => {
   const href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;

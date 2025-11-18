@@ -14,7 +14,7 @@ export const jewels: Jewel[] = [
     name: 'Anillo Sol Andino',
     category: 'Anillo',
     description: 'Plata martillada con detalle solar inspirado en los cielos de Mamalluca.',
-    image: 'images/jewels/anillo-sol.svg',
+    image: 'images/jewels/joya1.png',
     instagramUrl: 'https://instagram.com/elquijoyas/anillo-sol'
   },
   {
@@ -22,7 +22,7 @@ export const jewels: Jewel[] = [
     name: 'Collar Luz de Mamalluca',
     category: 'Collar',
     description: 'Colgante de bronce y piedra verde que refleja las noches claras del valle.',
-    image: 'images/jewels/collar-luz.svg',
+    image: 'images/jewels/joya2.png',
     instagramUrl: 'https://instagram.com/elquijoyas/collar-luz'
   },
   {
@@ -30,7 +30,7 @@ export const jewels: Jewel[] = [
     name: 'Aros Río Elqui',
     category: 'Aros',
     description: 'Aros fluidos en plata reciclada, inspirados en el cauce del río Elqui.',
-    image: 'images/jewels/aros-rio.svg',
+    image: 'images/jewels/joya3.png',
     instagramUrl: 'https://instagram.com/elquijoyas/aros-rio'
   },
   {
@@ -38,7 +38,7 @@ export const jewels: Jewel[] = [
     name: 'Pulsera Tierra Viva',
     category: 'Pulsera',
     description: 'Trenzado de cuero y metal que celebra los tonos del desierto florido.',
-    image: 'images/jewels/pulsera-tierra.svg',
+    image: 'images/jewels/joya4.png',
     instagramUrl: 'https://instagram.com/elquijoyas/pulsera-tierra'
   },
   {
@@ -54,7 +54,7 @@ export const jewels: Jewel[] = [
     name: 'Collar Cactus Florido',
     category: 'Collar',
     description: 'Pieza en bronce con silueta de cactus y cuarzo rosado del valle.',
-    image: 'images/jewels/collar-cactus.svg',
+    image: 'images/jewels/joya5.png',
     instagramUrl: 'https://instagram.com/elquijoyas/collar-cactus'
   }
 ];

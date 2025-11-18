@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1f1a17;
+  background-color: #fdf9f3;
+}
+
+body {
+  font-family: theme('fontFamily.sans');
+  background: linear-gradient(135deg, #fdf9f3, #f6ede2 35%, #fdf7ef 70%);
+  color: #1f1a17;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.card {
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-soft border border-white/60;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold bg-gold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg hover:bg-gold/90;
+}
+
+.button-ghost {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-full text-base font-semibold border border-gold text-gold transition hover:-translate-y-0.5 hover:bg-gold hover:text-white;
+}
+
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-terracotta/15 text-terracotta border border-terracotta/20;
+}

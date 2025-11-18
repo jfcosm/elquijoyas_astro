@@ -1,0 +1,55 @@
+<section id="contacto" class="section-padding">
+  <div class="container mx-auto px-4 space-y-12">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-6 flex items-center justify-between gap-4">
+        <div class="space-y-2">
+          <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">WhatsApp</p>
+          <h3 class="text-2xl font-serif font-semibold">Conversemos directo</h3>
+          <p class="text-neutral-700">Agenda una cita o resuelve dudas al instante por WhatsApp.</p>
+        </div>
+        <!-- Cambia aquí el número de WhatsApp -->
+        <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="button-primary">Escribir</a>
+      </div>
+      <div class="card p-6 flex items-center justify-between gap-4">
+        <div class="space-y-2">
+          <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Instagram</p>
+          <h3 class="text-2xl font-serif font-semibold">Galería viva</h3>
+          <p class="text-neutral-700">Mira las últimas piezas, procesos y encargos personalizados.</p>
+        </div>
+        <!-- Cambia la URL de Instagram aquí -->
+        <a href="https://instagram.com/elquijoyas" target="_blank" rel="noopener noreferrer" class="button-ghost">Visitar</a>
+      </div>
+    </div>
+
+    <div class="card p-8 grid lg:grid-cols-2 gap-8 items-start">
+      <div class="space-y-3">
+        <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Contacto</p>
+        <h3 class="text-3xl font-serif font-semibold">Cuéntanos tu idea</h3>
+        <p class="text-neutral-700">Envía tu mensaje y coordinamos juntos la pieza perfecta.</p>
+        <p class="text-xs text-neutral-500">* Formulario estático. Puedes cambiar la acción a mailto o integrar Formspree / servicio similar.</p>
+      </div>
+      <form class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-1" for="name">Nombre</label>
+          <input id="name" name="name" type="text" required class="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-1" for="email">Email</label>
+          <input id="email" name="email" type="email" required class="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-1" for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Cuéntanos qué pieza buscas"></textarea>
+        </div>
+        <!--
+          Para habilitar envío por correo directo, descomenta la línea y ajusta el mail:
+          action="mailto:tucorreo@ejemplo.com?subject=Consulta%20Elqui%20Joyas" method="POST" enctype="text/plain"
+
+          O integra un servicio como Formspree agregando la URL a action:
+          action="https://formspree.io/f/tu-id"
+        -->
+        <button type="submit" class="button-primary w-full sm:w-auto">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>

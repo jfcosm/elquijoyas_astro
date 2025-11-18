@@ -8,15 +8,13 @@ export interface Jewel {
   instagramUrl: string;
 }
 
-const base = import.meta.env.BASE_URL;
-
 export const jewels: Jewel[] = [
   {
     id: 'anillo-sol-andino',
     name: 'Anillo Sol Andino',
     category: 'Anillo',
     description: 'Plata martillada con detalle solar inspirado en los cielos de Mamalluca.',
-    image: `${base}images/jewels/anillo-sol.svg`,
+    image: '/images/jewels/anillo-sol.svg',
     instagramUrl: 'https://instagram.com/elquijoyas/anillo-sol'
   },
   {
@@ -24,7 +22,7 @@ export const jewels: Jewel[] = [
     name: 'Collar Luz de Mamalluca',
     category: 'Collar',
     description: 'Colgante de bronce y piedra verde que refleja las noches claras del valle.',
-    image: `${base}images/jewels/collar-luz.svg`,
+    image: '/images/jewels/collar-luz.svg',
     instagramUrl: 'https://instagram.com/elquijoyas/collar-luz'
   },
   {
@@ -32,7 +30,7 @@ export const jewels: Jewel[] = [
     name: 'Aros Río Elqui',
     category: 'Aros',
     description: 'Aros fluidos en plata reciclada, inspirados en el cauce del río Elqui.',
-    image: `${base}images/jewels/aros-rio.svg`,
+    image: '/images/jewels/aros-rio.svg',
     instagramUrl: 'https://instagram.com/elquijoyas/aros-rio'
   },
   {
@@ -40,7 +38,7 @@ export const jewels: Jewel[] = [
     name: 'Pulsera Tierra Viva',
     category: 'Pulsera',
     description: 'Trenzado de cuero y metal que celebra los tonos del desierto florido.',
-    image: `${base}images/jewels/pulsera-tierra.svg`,
+    image: '/images/jewels/pulsera-tierra.svg',
     instagramUrl: 'https://instagram.com/elquijoyas/pulsera-tierra'
   },
   {
@@ -48,7 +46,7 @@ export const jewels: Jewel[] = [
     name: 'Anillo Lunación',
     category: 'Anillo',
     description: 'Texturas lunares en plata ennegrecida con destellos dorados.',
-    image: `${base}images/jewels/anillo-luna.svg`,
+    image: '/images/jewels/anillo-luna.svg',
     instagramUrl: 'https://instagram.com/elquijoyas/anillo-luna'
   },
   {
@@ -56,7 +54,7 @@ export const jewels: Jewel[] = [
     name: 'Collar Cactus Florido',
     category: 'Collar',
     description: 'Pieza en bronce con silueta de cactus y cuarzo rosado del valle.',
-    image: `${base}images/jewels/collar-cactus.svg`,
+    image: '/images/jewels/collar-cactus.svg',
     instagramUrl: 'https://instagram.com/elquijoyas/collar-cactus'
   }
 ];

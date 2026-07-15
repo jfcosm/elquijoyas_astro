@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoreGallery from '../../components/StoreGallery.tsx';
+---
+<BaseLayout
+  title="Tienda | Elqui Joyas - Colección de Joyería Artesanal"
+  description="Explora nuestro catálogo en línea de joyas hechas a mano. Anillos, collares, aros y pulseras inspirados en el Valle de Elqui."
+>
+  <section class="section-padding bg-gradient-to-b from-sand via-clay/10 to-sand">
+    <div class="container mx-auto px-4 space-y-12">
+      <div class="space-y-3 text-center max-w-3xl mx-auto">
+        <span class="badge">Nuestra Tienda</span>
+        <h1 class="text-4xl md:text-5xl font-serif font-semibold text-neutral-900 leading-tight">
+          Piezas con identidad y alma
+        </h1>
+        <p class="text-lg text-neutral-700">
+          Todas las joyas son creadas a mano en nuestro taller de Vicuña. Si una pieza está agotada, puedes encargarla de forma personalizada.
+        </p>
+      </div>
+
+      <StoreGallery client:load />
+    </div>
+  </section>
+</BaseLayout>

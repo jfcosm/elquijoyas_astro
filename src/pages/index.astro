@@ -17,3 +17,101 @@ import FloatingInstagramButton from '../components/FloatingInstagramButton.tsx';
   <FloatingWhatsAppButton client:idle />
   <FloatingInstagramButton client:idle />
 </BaseLayout>
+
+<script>
+  import { db } from '../services/firebase';
+  import { doc, getDoc } from 'firebase/firestore';
+
+  async function loadDynamicTexts() {
+    try {
+      // 1. Cargar Hero
+      const heroDoc = await getDoc(doc(db, 'sections', 'hero'));
+      if (heroDoc.exists()) {
+        const data = heroDoc.data();
+        const badge = document.getElementById('hero-badge');
+        const title = document.getElementById('hero-title');
+        const desc = document.getElementById('hero-desc');
+        const featuredSub = document.getElementById('hero-featured-sub');
+        const featuredTitle = document.getElementById('hero-featured-title');
+        const featuredDesc = document.getElementById('hero-featured-desc');
+
+        if (badge && data.badge) badge.innerText = data.badge;
+        if (title && data.title) title.innerText = data.title;
+        if (desc && data.description) desc.innerText = data.description;
+        if (featuredSub && data.featuredSub) featuredSub.innerText = data.featuredSub;
+        if (featuredTitle && data.featuredTitle) featuredTitle.innerText = data.featuredTitle;
+        if (featuredDesc && data.featuredDesc) featuredDesc.innerText = data.featuredDesc;
+      }
+
+      // 2. Cargar Acerca de
+      const aboutDoc = await getDoc(doc(db, 'sections', 'about'));
+      if (aboutDoc.exists()) {
+        const data = aboutDoc.data();
+        const badge = document.getElementById('about-badge');
+        const title = document.getElementById('about-title');
+        const desc1 = document.getElementById('about-desc1');
+        const desc2 = document.getElementById('about-desc2');
+        const years = document.getElementById('about-years');
+        const yearsHero = document.getElementById('about-years-hero');
+        const handmade = document.getElementById('about-handmade');
+        const handmadeHero = document.getElementById('about-handmade-hero');
+        const quality = document.getElementById('about-quality');
+        const location = document.getElementById('about-location');
+        const procTitle = document.getElementById('about-process-title');
+        const procDesc = document.getElementById('about-process-desc');
+        const procItems = document.getElementById('about-process-items');
+
+        if (badge && data.badge) badge.innerText = data.badge;
+        if (title && data.title) title.innerText = data.title;
+        if (desc1 && data.description1) desc1.innerText = data.description1;
+        if (desc2 && data.description2) desc2.innerText = data.description2;
+        
+        if (years && data.experienceYears) years.innerText = data.experienceYears;
+        if (yearsHero && data.experienceYears) yearsHero.innerText = data.experienceYears;
+        if (handmade && data.handmadePercent) handmade.innerText = data.handmadePercent;
+        if (handmadeHero && data.handmadePercent) handmadeHero.innerText = data.handmadePercent;
+        if (quality && data.qualityBadge) quality.innerText = data.qualityBadge;
+        if (location && data.locationText) location.innerText = data.locationText;
+
+        if (procTitle && data.processTitle) procTitle.innerText = data.processTitle;
+        if (procDesc && data.processDesc) procDesc.innerText = data.processDesc;
+
+        if (procItems && data.processItems) {
+          procItems.innerHTML = data.processItems
+            .split('\n')
+            .filter(Boolean)
+            .map((item: string) => `<li>${item.trim()}</li>`)
+            .join('');
+        }
+      }
+
+      // 3. Cargar Contacto
+      const contactDoc = await getDoc(doc(db, 'sections', 'contact'));
+      if (contactDoc.exists()) {
+        const data = contactDoc.data();
+        const formTitle = document.getElementById('contact-form-title');
+        const formDesc = document.getElementById('contact-form-desc');
+        const whatsappBtn = document.getElementById('contact-whatsapp-btn') as HTMLAnchorElement;
+        const heroWhatsappBtn = document.getElementById('hero-whatsapp-btn') as HTMLAnchorElement;
+        const instagramBtn = document.getElementById('contact-instagram-btn') as HTMLAnchorElement;
+
+        if (formTitle && data.title) formTitle.innerText = data.title;
+        if (formDesc && data.description) formDesc.innerText = data.description;
+        
+        if (data.whatsappPhone) {
+          const waUrl = `https://wa.me/${data.whatsappPhone}`;
+          if (whatsappBtn) whatsappBtn.href = waUrl;
+          if (heroWhatsappBtn) heroWhatsappBtn.href = waUrl;
+        }
+        if (instagramBtn && data.instagramUrl) {
+          instagramBtn.href = data.instagramUrl;
+        }
+      }
+    } catch (err) {
+      console.error('Error loading dynamic frontpage texts:', err);
+    }
+  }
+
+  // Ejecutar cuando la página se cargue
+  window.addEventListener('DOMContentLoaded', loadDynamicTexts);
+</script>

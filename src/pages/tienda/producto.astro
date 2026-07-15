@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductDetail from '../../components/ProductDetail.tsx';
+---
+<BaseLayout
+  title="Detalle de Joya | Elqui Joyas"
+  description="Conoce en profundidad cada una de nuestras piezas de orfebrería. Diseños únicos hechos a mano con metales nobles y gemas naturales."
+>
+  <section class="section-padding bg-gradient-to-b from-sand via-clay/10 to-sand">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <ProductDetail client:load />
+    </div>
+  </section>
+</BaseLayout>

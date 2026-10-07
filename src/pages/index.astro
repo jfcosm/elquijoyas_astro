@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import AboutSection from '../components/AboutSection.astro';
 import JewelsGrid from '../components/JewelsGrid.astro';
+import InstagramReelsSection from '../components/InstagramReelsSection.tsx';
 import ValuesSection from '../components/ValuesSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton.tsx';
@@ -12,6 +13,7 @@ import FloatingInstagramButton from '../components/FloatingInstagramButton.tsx';
   <Hero />
   <AboutSection />
   <JewelsGrid />
+  <InstagramReelsSection client:load />
   <ValuesSection />
   <ContactSection />
   <FloatingWhatsAppButton client:idle />
@@ -112,6 +114,5 @@ import FloatingInstagramButton from '../components/FloatingInstagramButton.tsx';
     }
   }
 
-  // Ejecutar cuando la página se cargue
   window.addEventListener('DOMContentLoaded', loadDynamicTexts);
 </script>

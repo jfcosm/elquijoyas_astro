@@ -394,10 +394,12 @@ const AdminDashboard: React.FC = () => {
       <aside className="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-neutral-200 flex flex-col justify-between shrink-0">
         <div className="p-6">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-bold text-gold">EJ</div>
+            <div className="w-12 h-12 rounded-2xl overflow-hidden border border-[#D4C3AE] bg-white p-0.5 shrink-0 shadow-sm">
+              <img src="/images/logo-watercolor.jpg" alt="Logo" className="w-full h-full object-cover rounded-xl" />
+            </div>
             <div>
-              <h2 className="font-serif font-semibold text-lg leading-tight">Elqui Joyas</h2>
-              <span className="text-xs text-neutral-500">Panel de Control</span>
+              <h2 className="font-serif font-semibold text-lg leading-tight text-ink-deep">Elqui Joyas</h2>
+              <span className="text-xs uppercase tracking-wider text-emerald">Panel de Control</span>
             </div>
           </div>
 

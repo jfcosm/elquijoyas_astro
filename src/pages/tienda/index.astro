@@ -3,18 +3,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import StoreGallery from '../../components/StoreGallery.tsx';
 ---
 <BaseLayout
-  title="Tienda | Elqui Joyas - Colección de Joyería Artesanal"
-  description="Explora nuestro catálogo en línea de joyas hechas a mano. Anillos, collares, aros y pulseras inspirados en el Valle de Elqui."
+  title="Tienda & Catálogo | Elqui Joyas - Joyería de Autor"
+  description="Explora nuestro catálogo en línea de joyas artesanales creadas a mano. Anillos, collares, aros y pulseras de plata, bronce y gemas del Valle de Elqui."
 >
-  <section class="section-padding bg-gradient-to-b from-sand via-clay/10 to-sand">
+  <section class="section-padding relative">
+    <!-- Subtle background watercolor washes -->
+    <div class="absolute top-10 left-1/3 w-80 h-80 bg-emerald-light/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-1/2 right-10 w-96 h-96 bg-quartz-mist/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
     <div class="container mx-auto px-4 space-y-12">
-      <div class="space-y-3 text-center max-w-3xl mx-auto">
-        <span class="badge">Nuestra Tienda</span>
-        <h1 class="text-4xl md:text-5xl font-serif font-semibold text-neutral-900 leading-tight">
-          Piezas con identidad y alma
+      <div class="space-y-4 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-widest uppercase border border-quartz/30 bg-white/70 backdrop-blur-sm text-emerald">
+          <span>🌙</span> Catálogo de Autor
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-ink-deep leading-tight">
+          Piezas con Identidad y Mística
         </h1>
-        <p class="text-lg text-neutral-700">
-          Todas las joyas son creadas a mano en nuestro taller de Vicuña. Si una pieza está agotada, puedes encargarla de forma personalizada.
+        <p class="font-script text-2xl sm:text-3xl text-terracotta">
+          Forjadas a mano en Vicuña, Valle de Elqui
+        </p>
+        <p class="text-sm sm:text-base text-ink-medium max-w-2xl mx-auto">
+          Cada joya es elaborada meticulosamente por Nicolás Cordero. Si alguna pieza se encuentra reservada o agotada, puedes encargar una réplica o versión personalizada directamente por WhatsApp.
         </p>
       </div>
 

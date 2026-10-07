@@ -33,7 +33,6 @@ const AdminLogin: React.FC = () => {
     try {
       // Login interno con Firebase Auth usando el correo asignado y la contraseña dada
       await signInWithEmailAndPassword(auth, 'nico@elquijoyas.cl', password);
-      // Redirección manejada por el onAuthStateChanged o forzada
       window.location.href = '/admin';
     } catch (err: any) {
       console.error(err);
@@ -44,27 +43,34 @@ const AdminLogin: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sand via-clay to-sand px-4">
-      <div className="absolute -inset-10 bg-gold/10 blur-3xl rounded-full max-w-lg mx-auto pointer-events-none"></div>
+    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden py-12">
+      <div className="absolute top-1/4 left-1/3 w-80 h-80 bg-emerald-light/50 blur-3xl rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-quartz-mist/60 blur-3xl rounded-full pointer-events-none"></div>
       
-      <div className="w-full max-w-md card p-8 space-y-6 relative z-10">
-        <div className="text-center space-y-2">
-          <div className="w-16 h-16 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-gold font-bold text-2xl mx-auto">
-            EJ
+      <div className="w-full max-w-md card p-8 sm:p-10 space-y-6 relative z-10 bg-white/90 border-[#E8DFC8] shadow-watercolor">
+        <div className="text-center space-y-3">
+          <div className="w-20 h-20 rounded-2xl overflow-hidden border border-[#D4C3AE] shadow-md bg-white p-1 mx-auto">
+            <img 
+              src="/images/logo-watercolor.jpg" 
+              alt="Elqui Joyas Logo Oficial" 
+              class="w-full h-full object-cover rounded-xl"
+            />
           </div>
-          <h1 className="text-3xl font-serif font-semibold text-neutral-900">Panel de Control</h1>
-          <p className="text-sm text-neutral-600">Acceso exclusivo para Nicolás Cordero</p>
+          <div>
+            <h1 className="text-3xl font-serif font-bold text-ink-deep">Panel de Control</h1>
+            <p className="text-xs uppercase tracking-widest text-ink-muted mt-1">Acceso exclusivo · Nicolás Cordero</p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
-            <div className="p-3 bg-red-50 text-red-600 text-sm rounded-xl border border-red-100 animate-pulse">
-              ⚠️ {error}
+            <div className="p-3 bg-red-50 text-red-600 text-xs rounded-xl border border-red-100 flex items-center gap-2">
+              <span>⚠️</span> {error}
             </div>
           )}
 
           <div>
-            <label className="block text-sm font-medium text-neutral-700 mb-1" htmlFor="username">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" htmlFor="username">
               Usuario
             </label>
             <input
@@ -73,13 +79,13 @@ const AdminLogin: React.FC = () => {
               required
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold transition duration-200"
-              placeholder="Nombre de usuario"
+              className="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/90 px-4 py-3 text-sm text-ink-deep focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition duration-200"
+              placeholder="Ej. nico"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-neutral-700 mb-1" htmlFor="password">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" htmlFor="password">
               Contraseña
             </label>
             <input
@@ -88,7 +94,7 @@ const AdminLogin: React.FC = () => {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold transition duration-200"
+              className="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/90 px-4 py-3 text-sm text-ink-deep focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition duration-200"
               placeholder="••••••••"
             />
           </div>
@@ -96,7 +102,7 @@ const AdminLogin: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full button-primary mt-2"
+            className="w-full button-primary mt-2 !py-3.5 text-sm"
           >
             {loading ? (
               <span className="flex items-center justify-center gap-2">
@@ -107,10 +113,16 @@ const AdminLogin: React.FC = () => {
                 Iniciando sesión...
               </span>
             ) : (
-              'Ingresar'
+              'Ingresar al Taller ✦'
             )}
           </button>
         </form>
+
+        <div className="text-center pt-2">
+          <a href="/" className="text-xs text-ink-muted hover:text-emerald transition">
+            ← Volver a la portada de la web
+          </a>
+        </div>
       </div>
     </div>
   );

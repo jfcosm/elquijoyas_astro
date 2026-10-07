@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Cambia url para apuntar a la cuenta o pieza de Instagram
 interface Props {
   url?: string;
 }
@@ -11,10 +10,11 @@ const FloatingInstagramButton: React.FC<Props> = ({ url = 'https://instagram.com
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-20 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-terracotta to-gold text-white px-4 py-3 shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5"
+      aria-label="Ver perfil de Instagram"
+      className="fixed bottom-24 right-6 z-50 inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-terracotta to-quartz text-white px-5 py-3.5 shadow-watercolor hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
     >
       <span className="text-xl">📸</span>
-      <span className="hidden sm:inline text-sm font-semibold">Instagram</span>
+      <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider">Instagram</span>
     </a>
   );
 };

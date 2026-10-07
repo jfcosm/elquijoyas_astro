@@ -1,34 +1,101 @@
-<footer class="bg-neutral-900 text-white py-12 mt-12">
-  <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
-    <div class="space-y-3">
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold">EJ</div>
+---
+---
+<footer class="bg-[#1F1A17] text-[#FAF6F0] py-16 mt-20 border-t border-[#3A312B] relative overflow-hidden">
+  <!-- Subtle background glow -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-terracotta/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="container mx-auto px-4 grid md:grid-cols-12 gap-10 relative z-10">
+    <!-- Brand / Logo presentation -->
+    <div class="md:col-span-5 space-y-4">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl overflow-hidden border border-[#55463C] bg-white/10 p-1 shadow-sm">
+          <img 
+            src="/images/logo-watercolor.jpg" 
+            alt="Elqui Joyas Logo Oficial Acuarela" 
+            class="w-full h-full object-cover rounded-xl"
+          />
+        </div>
         <div>
-          <p class="text-lg font-serif font-semibold">Elqui Joyas</p>
-          <p class="text-sm text-neutral-300">Joyería y Orfebrería Artesanal en el Valle de Elqui.</p>
+          <p class="text-2xl font-serif font-bold text-white tracking-wide">Elqui Joyas</p>
+          <p class="text-xs uppercase tracking-widest text-[#C78883]">Nicolás Cordero · Orfebre</p>
         </div>
       </div>
+      <p class="text-sm text-[#D5C6BA] leading-relaxed max-w-sm">
+        Joyería y orfebrería de autor forjada a mano en el Valle de Elqui. Metales nobles, cristales naturales e inspiración astronómica bajo los cielos del Cerro Mamalluca.
+      </p>
+      <div class="flex items-center gap-2 text-xs text-[#A8988C] pt-2">
+        <span>📍</span> Vicuña, Valle de Elqui, Región de Coquimbo, Chile.
+      </div>
     </div>
-    <div>
-      <h4 class="font-semibold mb-3">Navegación</h4>
-      <ul class="space-y-2 text-neutral-300">
-        <li><a href="/#inicio" class="hover:text-gold">Inicio</a></li>
-        <li><a href="/tienda" class="hover:text-gold">Tienda</a></li>
-        <li><a href="/#acerca" class="hover:text-gold">Acerca de</a></li>
-        <li><a href="/#contacto" class="hover:text-gold">Contacto</a></li>
+
+    <!-- Quick Navigation -->
+    <div class="md:col-span-3 space-y-3">
+      <h4 class="text-xs uppercase font-semibold tracking-widest text-[#C5A059]">Navegación</h4>
+      <ul class="space-y-2.5 text-sm text-[#D5C6BA]">
+        <li>
+          <a href="/#inicio" class="hover:text-[#F0E0B4] transition-colors flex items-center gap-2">
+            <span class="text-[#C78883]">✦</span> Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/tienda" class="hover:text-[#F0E0B4] transition-colors flex items-center gap-2">
+            <span class="text-[#C78883]">✦</span> Tienda & Catálogo
+          </a>
+        </li>
+        <li>
+          <a href="/#acerca" class="hover:text-[#F0E0B4] transition-colors flex items-center gap-2">
+            <span class="text-[#C78883]">✦</span> Acerca de Nicolás
+          </a>
+        </li>
+        <li>
+          <a href="/#valores" class="hover:text-[#F0E0B4] transition-colors flex items-center gap-2">
+            <span class="text-[#C78883]">✦</span> Origen & Mística
+          </a>
+        </li>
+        <li>
+          <a href="/#contacto" class="hover:text-[#F0E0B4] transition-colors flex items-center gap-2">
+            <span class="text-[#C78883]">✦</span> Contacto
+          </a>
+        </li>
       </ul>
     </div>
-    <div>
-      <h4 class="font-semibold mb-3">Redes</h4>
-      <ul class="space-y-2 text-neutral-300">
-        <li><a href="https://instagram.com/elqui_joyas" target="_blank" rel="noopener noreferrer" class="hover:text-gold">Instagram</a></li>
-        <li><a href="https://wa.me/56931983075" target="_blank" rel="noopener noreferrer" class="hover:text-gold">WhatsApp</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-3">Ubicación</h4>
-      <p class="text-neutral-300">Valle de Elqui, Vicuña, Chile</p>
-      <p class="text-xs text-neutral-500 mt-4">© 2024 Elqui Joyas. Todos los derechos reservados.</p>
+
+    <!-- Direct Channels & Admin -->
+    <div class="md:col-span-4 space-y-4">
+      <h4 class="text-xs uppercase font-semibold tracking-widest text-[#C5A059]">Contacto & Redes</h4>
+      <div class="space-y-3">
+        <a 
+          href="https://wa.me/56931983075" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="flex items-center gap-3 p-3 rounded-2xl bg-white/5 border border-[#3A312B] hover:border-[#C5A059] transition text-sm text-[#FAF6F0] group"
+        >
+          <span class="text-lg">💬</span>
+          <div>
+            <p class="font-medium group-hover:text-[#F0E0B4]">WhatsApp Directo</p>
+            <p class="text-xs text-[#A8988C]">+56 9 3198 3075</p>
+          </div>
+        </a>
+
+        <a 
+          href="https://instagram.com/elqui_joyas" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="flex items-center gap-3 p-3 rounded-2xl bg-white/5 border border-[#3A312B] hover:border-[#C78883] transition text-sm text-[#FAF6F0] group"
+        >
+          <span class="text-lg">📸</span>
+          <div>
+            <p class="font-medium group-hover:text-[#E8C5C2]">Instagram Oficial</p>
+            <p class="text-xs text-[#A8988C]">@elqui_joyas</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="pt-2 flex items-center justify-between text-xs text-[#8A7B70]">
+        <span>© 2024 Elqui Joyas.</span>
+        <a href="/admin" class="hover:text-[#C5A059] transition-colors">Panel Admin 🔒</a>
+      </div>
     </div>
   </div>
 </footer>

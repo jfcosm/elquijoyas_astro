@@ -1,47 +1,92 @@
-<section id="acerca" class="section-padding">
-  <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
-    <div class="space-y-4">
-      <p class="text-sm uppercase tracking-[0.3em] text-neutral-500" id="about-badge">Acerca de Nicolás Cordero</p>
-      <h2 class="text-3xl md:text-4xl font-serif font-semibold text-neutral-900" id="about-title">Orfebre del Valle de Elqui</h2>
-      <p class="text-neutral-700 leading-relaxed" id="about-desc1">
-        Soy Nicolás Cordero, orfebre con más de 15 años dedicados a la creación de joyas que cuentan historias. Cada
-        pieza nace en mi taller en Vicuña, a los pies del Cerro Mamalluca, donde la luz nocturna y la naturaleza del Valle de
-        Elqui inspiran cada curva y textura.
+---
+---
+<section id="acerca" class="section-padding relative">
+  <!-- Subtle decorative watercolor glow in the background -->
+  <div class="absolute top-1/2 left-0 w-96 h-96 bg-quartz-mist/60 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  
+  <div class="container mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
+    <!-- Left Column: Bio & Artisan Vision -->
+    <div class="lg:col-span-7 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-widest uppercase border border-quartz/40 bg-white/70 backdrop-blur-sm text-emerald">
+        <span>✦</span> <span id="about-badge">Acerca de Nicolás Cordero</span>
+      </div>
+
+      <div class="space-y-3">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-ink-deep leading-tight" id="about-title">
+          Orfebre & Creador del Valle de Elqui
+        </h2>
+        <p class="font-script text-2xl text-emerald">
+          Arte en metal forjado con alma y paciencia
+        </p>
+      </div>
+
+      <p class="text-base sm:text-lg text-ink-medium leading-relaxed" id="about-desc1">
+        Soy Nicolás Cordero, orfebre con más de 15 años dedicados a dar forma a joyas que capturan la memoria y la energía de nuestra tierra. Cada pieza nace en mi taller de Vicuña, custodiado por la imponencia del Cerro Mamalluca y cobijado por cielos estrellados.
       </p>
-      <p class="text-neutral-700 leading-relaxed" id="about-desc2">
-        Trabajo 100% artesanal, seleccionando materiales nobles y técnicas tradicionales para asegurar calidad,
-        sostenibilidad y autenticidad en cada joya. Mi misión es crear piezas que acompañen momentos significativos con
-        calidez y carácter.
+
+      <p class="text-base text-ink-medium leading-relaxed" id="about-desc2">
+        Mi trabajo es 100% artesanal: selecciono metales nobles, cristales naturales y piedras energéticas, fusionando técnicas ancestrales de fundición y cincelado con una mirada contemporánea inspirada en las formas orgánicas de la naturaleza.
       </p>
-      <div class="grid sm:grid-cols-3 gap-4 pt-4">
-        <div class="card p-4 text-center space-y-2">
-          <p class="text-2xl font-serif font-semibold text-gold" id="about-years">15+</p>
-          <p class="text-sm text-neutral-600">Años de experiencia</p>
+
+      <!-- Metric Highlights in Watercolor Cards -->
+      <div class="grid sm:grid-cols-3 gap-4 pt-3">
+        <div class="card p-5 text-center space-y-1 bg-white/85 border-[#EBDDCB] shadow-sm">
+          <p class="text-3xl font-serif font-bold text-emerald" id="about-years">15+</p>
+          <p class="text-xs uppercase tracking-wider text-ink-muted">Años de oficio</p>
         </div>
-        <div class="card p-4 text-center space-y-2">
-          <p class="text-2xl font-serif font-semibold text-gold" id="about-handmade">100%</p>
-          <p class="text-sm text-neutral-600">Hecho a mano</p>
+        <div class="card p-5 text-center space-y-1 bg-white/85 border-[#EBDDCB] shadow-sm">
+          <p class="text-3xl font-serif font-bold text-terracotta" id="about-handmade">100%</p>
+          <p class="text-xs uppercase tracking-wider text-ink-muted">Hecho a mano</p>
         </div>
-        <div class="card p-4 text-center space-y-2">
-          <p class="text-2xl font-serif font-semibold text-gold" id="about-quality">Calidad</p>
-          <p class="text-sm text-neutral-600">Pasión por los detalles</p>
+        <div class="card p-5 text-center space-y-1 bg-white/85 border-[#EBDDCB] shadow-sm">
+          <p class="text-3xl font-serif font-bold text-gold" id="about-quality">Noble</p>
+          <p class="text-xs uppercase tracking-wider text-ink-muted">Metales & Gemas</p>
         </div>
       </div>
-      <p class="text-sm text-neutral-600 italic" id="about-location">Ubicado en el Valle de Elqui, Vicuña, Chile, a los pies del Cerro Mamalluca.</p>
+
+      <p class="text-xs sm:text-sm text-ink-muted italic flex items-center gap-2 pt-2" id="about-location">
+        <span>📍</span> Taller en Vicuña, Valle de Elqui, Región de Coquimbo, Chile.
+      </p>
     </div>
-    <div class="relative">
-      <div class="absolute -inset-8 bg-terracotta/15 rounded-3xl blur-3xl"></div>
-      <div class="relative card p-6 space-y-4">
-        <h3 class="text-2xl font-serif font-semibold" id="about-process-title">Proceso artesanal</h3>
-        <p class="text-neutral-700 leading-relaxed" id="about-process-desc">
-          Desde el diseño hasta el pulido final, cada pieza pasa por mis manos. Uso herramientas tradicionales y
-          técnicas de orfebrería moderna para lograr acabados delicados y duraderos.
+
+    <!-- Right Column: Process & Philosophy Card -->
+    <div class="lg:col-span-5 relative">
+      <div class="card p-7 sm:p-9 space-y-6 bg-gradient-to-br from-white/95 via-[#FAF6F0]/90 to-white/90 border-[#E5D4C0] shadow-watercolor">
+        <div class="flex items-center gap-3 border-b border-[#EBDDCB] pb-4">
+          <div class="w-10 h-10 rounded-full bg-emerald-light flex items-center justify-center text-emerald text-xl font-serif">
+            ⚒
+          </div>
+          <div>
+            <h3 class="text-2xl font-serif font-semibold text-ink-deep" id="about-process-title">
+              El Proceso Artesanal
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-ink-muted">De la roca y el fuego a la joya</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-ink-medium leading-relaxed" id="about-process-desc">
+          Desde el boceto original hasta el pulido final a mano, cada joya atraviesa un cuidadoso ritual de modelado, soldadura y engaste de piedras preciosas sin procesos industriales masivos.
         </p>
-        <ul class="space-y-2 text-neutral-700 list-disc list-inside" id="about-process-items">
-          <li>Selección consciente de materiales y proveedores locales.</li>
-          <li>Producción a pequeña escala para mantener la autenticidad.</li>
-          <li>Inspiración en los cielos despejados y la flora del Valle de Elqui.</li>
+
+        <ul class="space-y-3 text-sm text-ink-medium" id="about-process-items">
+          <li class="flex items-start gap-3">
+            <span class="text-emerald font-bold mt-0.5">✦</span>
+            <span>Selección consciente de minerales auténticos y proveedores éticos.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-terracotta font-bold mt-0.5">✦</span>
+            <span>Producción exclusiva a escala humana para garantizar la máxima durabilidad.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-gold font-bold mt-0.5">✦</span>
+            <span>Inspiración en la geomorfología y mística astronómica del Valle de Elqui.</span>
+          </li>
         </ul>
+
+        <div class="p-4 rounded-2xl bg-emerald-light/60 border border-emerald/20 text-xs text-emerald-dark leading-relaxed flex items-center gap-3">
+          <span class="text-xl">🌿</span>
+          <span>Cada joya incluye tarjeta de procedencia y guía de cuidados para conservar el metal y la gema por generaciones.</span>
+        </div>
       </div>
     </div>
   </div>

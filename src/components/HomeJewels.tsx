@@ -54,42 +54,67 @@ const HomeJewels: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="py-12 text-center space-y-4">
-        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gold mx-auto"></div>
-        <p className="text-neutral-500 font-medium text-sm">Cargando colección...</p>
+      <div className="py-16 text-center space-y-4">
+        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-emerald mx-auto"></div>
+        <p className="text-ink-muted font-serif text-base italic">Descubriendo joyas del taller...</p>
       </div>
     );
   }
 
   if (jewels.length === 0) {
-    return null; // Oculta si no hay joyas cargadas
+    return null;
   }
 
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {jewels.map((jewel) => {
         const catName = categories.find((c) => c.id === jewel.category)?.name || jewel.category;
         return (
-          <article className="card p-5 flex flex-col gap-4 group hover:shadow-lg transition-all duration-300" key={jewel.id}>
-            <div className="aspect-square rounded-xl overflow-hidden border border-white/70 relative">
-              <img src={jewel.image} alt={jewel.name} className="w-full h-full object-cover group-hover:scale-102 transition duration-300" loading="lazy" />
+          <article
+            className="card p-6 flex flex-col gap-4 group hover:shadow-watercolor transition-all duration-500 bg-white/85 border-[#E8DFC8]"
+            key={jewel.id}
+          >
+            <div className="aspect-square rounded-2xl overflow-hidden border border-[#E8DFC8] relative bg-[#FAF6F0]">
+              <img
+                src={jewel.image}
+                alt={jewel.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                loading="lazy"
+              />
               {!jewel.available && (
-                <div className="absolute inset-0 bg-neutral-900/50 flex items-center justify-center">
-                  <span className="bg-white/90 text-neutral-800 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                <div className="absolute inset-0 bg-ink-deep/60 backdrop-blur-[2px] flex items-center justify-center">
+                  <span className="bg-white/95 text-ink-deep px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-md">
                     Bajo Encargo
                   </span>
                 </div>
               )}
             </div>
+
             <div className="flex items-center justify-between">
-              <span className="badge">{catName}</span>
-              <a href={`/tienda/producto?id=${jewel.id}`} className="text-sm font-medium text-gold hover:text-terracotta transition">
-                Ver detalles
-              </a>
+              <span className="badge !text-[11px]">{catName}</span>
+              {jewel.price && (
+                <span className="text-base font-bold text-ink-deep font-sans">
+                  ${jewel.price.toLocaleString('es-CL')}
+                </span>
+              )}
             </div>
+
             <div className="space-y-2 flex-1">
-              <h3 className="text-xl font-serif font-semibold text-neutral-900">{jewel.name}</h3>
-              <p className="text-neutral-700 leading-relaxed text-sm line-clamp-2">{jewel.description}</p>
+              <h3 className="text-2xl font-serif font-semibold text-ink-deep leading-snug group-hover:text-emerald transition-colors">
+                {jewel.name}
+              </h3>
+              <p className="text-ink-medium leading-relaxed text-sm line-clamp-2">
+                {jewel.description}
+              </p>
+            </div>
+
+            <div className="pt-2 border-t border-[#EBDDCB]/60">
+              <a
+                href={`/tienda/producto?id=${jewel.id}`}
+                className="button-ghost !py-2 !w-full text-xs font-semibold text-center"
+              >
+                Ver Detalle de Pieza ✦
+              </a>
             </div>
           </article>
         );

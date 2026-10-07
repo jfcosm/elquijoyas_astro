@@ -1,18 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color: #1f1a17;
-  background-color: #fdf9f3;
+  color: #26201b;
+  background-color: #faf6f0;
+  --bg-parchment: #faf6f0;
+  --color-emerald: #3d5e49;
+  --color-quartz: #c78883;
+  --color-terracotta: #b66d4e;
+  --color-gold: #c5a059;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: theme('fontFamily.sans');
-  background: linear-gradient(135deg, #fdf9f3, #f6ede2 35%, #fdf7ef 70%);
-  color: #1f1a17;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #26201b;
+  background-color: #faf6f0;
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(226, 236, 229, 0.6) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 15%, rgba(248, 235, 234, 0.7) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 60%, rgba(240, 224, 180, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 90%, rgba(229, 169, 146, 0.3) 0%, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Tipografías especializadas */
+.font-serif-artisan {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-display-artisan {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+}
+
+.font-script-artisan {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
 }
 
 a {
@@ -21,21 +50,62 @@ a {
 }
 
 .section-padding {
-  @apply py-16 md:py-24;
+  @apply py-20 md:py-28;
 }
 
+/* Tarjetas con textura de papel de acuarela prensado en frío */
 .card {
-  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-soft border border-white/60;
+  @apply bg-white/80 backdrop-blur-md rounded-3xl border border-[#ede3d4] shadow-watercolor transition-all duration-300;
 }
 
+.card:hover {
+  @apply border-[#dfcfbc] shadow-lg;
+}
+
+/* Botón Principal con gradiente de acuarela mineral */
 .button-primary {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold bg-gold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg hover:bg-gold/90;
+  @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide text-white transition-all duration-300 shadow-md;
+  background: linear-gradient(135deg, #3d5e49 0%, #4a6d56 40%, #b66d4e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+.button-primary:hover {
+  @apply -translate-y-0.5 shadow-watercolor;
+  background: linear-gradient(135deg, #2c4837 0%, #3d5e49 40%, #9e5b3f 100%);
+}
+
+/* Botón Secundario / Fantasma con borde de oro acuarela */
 .button-ghost {
-  @apply inline-flex items-center justify-center px-5 py-3 rounded-full text-base font-semibold border border-gold text-gold transition hover:-translate-y-0.5 hover:bg-gold hover:text-white;
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold tracking-wide text-[#3d5e49] bg-white/70 backdrop-blur-sm border border-[#c5a059]/60 transition-all duration-300;
 }
 
+.button-ghost:hover {
+  @apply -translate-y-0.5 bg-[#c5a059] text-white shadow-md border-[#c5a059];
+}
+
+/* Insignia / Badge con mancha traslúcida de acuarela */
 .badge {
-  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-terracotta/15 text-terracotta border border-terracotta/20;
+  @apply inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border border-[#e8c5c2]/80;
+  background: linear-gradient(135deg, rgba(226, 236, 229, 0.8) 0%, rgba(248, 235, 234, 0.8) 50%, rgba(240, 224, 180, 0.6) 100%);
+  color: #3d5e49;
+}
+
+/* Decoraciones de acuarela */
+.watercolor-wash-box {
+  position: relative;
+}
+
+.watercolor-wash-box::before {
+  content: '';
+  position: absolute;
+  inset: -1.5rem;
+  background: radial-gradient(circle, rgba(199, 136, 131, 0.15) 0%, rgba(74, 109, 86, 0.12) 50%, transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Sombra suave de pigmento */
+.pigment-glow {
+  filter: drop-shadow(0 8px 16px rgba(182, 109, 78, 0.15));
 }

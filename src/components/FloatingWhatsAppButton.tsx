@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Cambia phone para actualizar el número de contacto de WhatsApp
 interface Props {
   phone?: string;
   message?: string;
@@ -8,7 +7,7 @@ interface Props {
 
 const FloatingWhatsAppButton: React.FC<Props> = ({
   phone = '56931983075',
-  message = 'Hola, quiero saber más sobre las joyas Elqui Joyas'
+  message = 'Hola Nicolás, me comunico desde la web Elqui Joyas para consultar por tus joyas artesanales.'
 }) => {
   const href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   return (
@@ -16,10 +15,11 @@ const FloatingWhatsAppButton: React.FC<Props> = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-green-500 text-white px-4 py-3 shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5"
+      aria-label="Contactar por WhatsApp"
+      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-emerald to-emerald-dark text-white px-5 py-3.5 shadow-watercolor hover:shadow-glow-emerald transition-all duration-300 transform hover:-translate-y-1 border border-white/30"
     >
       <span className="text-xl">💬</span>
-      <span className="hidden sm:inline text-sm font-semibold">WhatsApp</span>
+      <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider">WhatsApp</span>
     </a>
   );
 };

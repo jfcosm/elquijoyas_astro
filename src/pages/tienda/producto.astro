@@ -4,10 +4,13 @@ import ProductDetail from '../../components/ProductDetail.tsx';
 ---
 <BaseLayout
   title="Detalle de Joya | Elqui Joyas"
-  description="Conoce en profundidad cada una de nuestras piezas de orfebrería. Diseños únicos hechos a mano con metales nobles y gemas naturales."
+  description="Conoce en profundidad cada una de nuestras piezas de orfebrería de autor. Diseños únicos hechos a mano con metales nobles y gemas del Valle de Elqui."
 >
-  <section class="section-padding bg-gradient-to-b from-sand via-clay/10 to-sand">
-    <div class="container mx-auto px-4 max-w-4xl">
+  <section class="section-padding relative">
+    <div class="absolute top-10 left-1/4 w-80 h-80 bg-emerald-light/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-quartz-mist/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="container mx-auto px-4 max-w-5xl">
       <ProductDetail client:load />
     </div>
   </section>

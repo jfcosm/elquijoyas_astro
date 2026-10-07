@@ -1,55 +1,131 @@
-<section id="contacto" class="section-padding">
+---
+---
+<section id="contacto" class="section-padding relative">
   <div class="container mx-auto px-4 space-y-12">
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="card p-6 flex items-center justify-between gap-4">
+    <!-- Action Channels -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- WhatsApp Box -->
+      <div class="card p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-gradient-to-br from-white/90 via-[#FAF6F0] to-white/80 border-[#E8DFC8]">
         <div class="space-y-2">
-          <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">WhatsApp</p>
-          <h3 class="text-2xl font-serif font-semibold">Conversemos directo</h3>
-          <p class="text-neutral-700">Agenda una cita o resuelve dudas al instante por WhatsApp.</p>
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-emerald-light text-emerald border border-emerald/20">
+            <span>💬</span> WhatsApp Directo
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-serif font-semibold text-ink-deep">Atención Personalizada</h3>
+          <p class="text-sm text-ink-medium max-w-sm leading-relaxed">
+            Resuelve consultas sobre disponibilidad, medidas o cotiza una pieza exclusiva con Nicolás.
+          </p>
         </div>
-        <!-- Cambia aquí el número de WhatsApp -->
-        <a href="https://wa.me/56931983075" target="_blank" rel="noopener noreferrer" class="button-primary" id="contact-whatsapp-btn">Escribir</a>
+        <a 
+          href="https://wa.me/56931983075" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="button-primary whitespace-nowrap !py-3 !px-6 text-sm" 
+          id="contact-whatsapp-btn"
+        >
+          Escribir por WhatsApp
+        </a>
       </div>
-      <div class="card p-6 flex items-center justify-between gap-4">
+
+      <!-- Instagram Box -->
+      <div class="card p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-gradient-to-br from-white/90 via-[#FAF6F0] to-white/80 border-[#E8DFC8]">
         <div class="space-y-2">
-          <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Instagram</p>
-          <h3 class="text-2xl font-serif font-semibold">Galería viva</h3>
-          <p class="text-neutral-700">Mira las últimas piezas, procesos y encargos personalizados.</p>
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-quartz-mist text-quartz border border-quartz/30">
+            <span>📸</span> Instagram
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-serif font-semibold text-ink-deep">Galería Viva & Taller</h3>
+          <p class="text-sm text-ink-medium max-w-sm leading-relaxed">
+            Sigue el día a día en el taller de Vicuña, procesos de fundición y novedades de la colección.
+          </p>
         </div>
-        <!-- Cambia la URL de Instagram aquí -->
-        <a href="https://instagram.com/elqui_joyas" target="_blank" rel="noopener noreferrer" class="button-ghost" id="contact-instagram-btn">Visitar</a>
+        <a 
+          href="https://instagram.com/elquijoyas" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="button-ghost whitespace-nowrap !py-3 !px-6 text-sm" 
+          id="contact-instagram-btn"
+        >
+          Visitar @elquijoyas
+        </a>
       </div>
     </div>
 
-    <div class="card p-8 grid lg:grid-cols-2 gap-8 items-start">
-      <div class="space-y-3">
-        <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Contacto</p>
-        <h3 class="text-3xl font-serif font-semibold" id="contact-form-title">Cuéntanos tu idea</h3>
-        <p class="text-neutral-700" id="contact-form-desc">Envía tu mensaje y coordinamos juntos la pieza perfecta.</p>
-        <p class="text-xs text-neutral-500">* Formulario estático. Puedes cambiar la acción a mailto o integrar Formspree / servicio similar.</p>
+    <!-- Contact Form Card -->
+    <div class="card p-8 md:p-12 grid lg:grid-cols-12 gap-10 items-start bg-white/90 border-[#E5D4C0] shadow-watercolor">
+      <div class="lg:col-span-5 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-widest uppercase border border-quartz/30 bg-white/70 backdrop-blur-sm text-emerald">
+          <span>✧</span> Escríbenos
+        </div>
+        <h3 class="text-3xl sm:text-4xl font-serif font-semibold text-ink-deep" id="contact-form-title">
+          Cuéntanos tu Idea o Encargo Especial
+        </h3>
+        <p class="text-sm sm:text-base text-ink-medium leading-relaxed" id="contact-form-desc">
+          ¿Tienes en mente una joya personalizada, un anillo de compromiso o un regalo único con minerales del Valle de Elqui? Escríbenos y diseñamos juntos la pieza soñada.
+        </p>
+        <div class="pt-4 border-t border-[#EBDDCB] space-y-2 text-xs text-ink-muted">
+          <p class="flex items-center gap-2">
+            <span>⏱️</span> Respuesta habitual dentro del mismo día laboral.
+          </p>
+          <p class="flex items-center gap-2">
+            <span>📦</span> Envíos asegurados a todo Chile desde Vicuña.
+          </p>
+        </div>
       </div>
-      <form class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium text-neutral-700 mb-1" for="name">Nombre</label>
-          <input id="name" name="name" type="text" required class="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-neutral-700 mb-1" for="email">Email</label>
-          <input id="email" name="email" type="email" required class="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-neutral-700 mb-1" for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Cuéntanos qué pieza buscas"></textarea>
-        </div>
-        <!--
-          Para habilitar envío por correo directo, descomenta la línea y ajusta el mail:
-          action="mailto:tucorreo@ejemplo.com?subject=Consulta%20Elqui%20Joyas" method="POST" enctype="text/plain"
 
-          O integra un servicio como Formspree agregando la URL a action:
-          action="https://formspree.io/f/tu-id"
-        -->
-        <button type="submit" class="button-primary w-full sm:w-auto">Enviar</button>
-      </form>
+      <div class="lg:col-span-7">
+        <form class="space-y-4" onsubmit="event.preventDefault(); window.open(`https://wa.me/56931983075?text=${encodeURIComponent('Hola Nicolás, me contacto desde la web. Mi nombre es ' + (document.getElementById('name') as HTMLInputElement)?.value + '. Mensaje: ' + (document.getElementById('message') as HTMLTextAreaElement)?.value)}`, '_blank');">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" for="name">
+                Nombre Completo
+              </label>
+              <input 
+                id="name" 
+                name="name" 
+                type="text" 
+                required 
+                placeholder="Ej. Camila Morales"
+                class="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/80 px-4 py-3.5 text-sm text-ink-deep placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" for="email">
+                Correo Electrónico
+              </label>
+              <input 
+                id="email" 
+                name="email" 
+                type="email" 
+                required 
+                placeholder="tu@correo.com"
+                class="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/80 px-4 py-3.5 text-sm text-ink-deep placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" for="message">
+              ¿Qué pieza o consulta tienes en mente?
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              required
+              placeholder="Cuéntanos el tipo de joya, metales o gemas de tu preferencia..."
+              class="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/80 px-4 py-3.5 text-sm text-ink-deep placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition"
+            ></textarea>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="submit" class="button-primary w-full sm:w-auto text-sm">
+              <span>✉️</span> Enviar Consulta Directa
+            </button>
+            <p class="text-[11px] text-ink-muted italic text-center sm:text-right">
+              Te responderemos a la brevedad por WhatsApp o correo.
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>

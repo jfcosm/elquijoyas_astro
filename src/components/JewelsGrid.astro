@@ -1,17 +1,29 @@
 ---
 import HomeJewels from './HomeJewels.tsx';
 ---
-<section id="coleccion" class="section-padding bg-white/70">
-  <div class="container mx-auto px-4 space-y-10">
+<section id="coleccion" class="section-padding relative">
+  <div class="container mx-auto px-4 space-y-12">
     <div class="space-y-3 text-center max-w-3xl mx-auto">
-      <p class="text-sm uppercase tracking-[0.3em] text-neutral-500">Colección de joyas</p>
-      <h2 class="text-3xl md:text-4xl font-serif font-semibold text-neutral-900">Piezas que cuentan historias</h2>
-      <p class="text-neutral-700">Explora una selección de piezas creadas a mano. Cada diseño puede personalizarse y se envía con certificado de autenticidad.</p>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-widest uppercase border border-quartz/30 bg-white/70 backdrop-blur-sm text-emerald">
+        <span>✦</span> Colección Destacada
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-ink-deep">
+        Piezas que Cuentan Historias
+      </h2>
+      <p class="font-script text-2xl text-terracotta">
+        Creaciones de autor con minerales, plata y bronce
+      </p>
+      <p class="text-sm sm:text-base text-ink-medium max-w-xl mx-auto">
+        Explora una selección exclusiva de nuestras piezas creadas a mano. Cada obra es irrepetible y se entrega con empaque artesanal y certificado de autenticidad.
+      </p>
     </div>
+
+    <!-- Interactive Grid with client:load -->
     <HomeJewels client:load />
-    <div class="text-center pt-4">
-      <a href="/tienda" class="button-primary">
-        Ver Tienda Completa →
+
+    <div class="text-center pt-6">
+      <a href="/tienda" class="button-primary text-base">
+        <span>✧</span> Ver Todo el Catálogo en la Tienda →
       </a>
     </div>
   </div>

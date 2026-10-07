@@ -1,33 +1,58 @@
 ---
 const links = [
   { href: '/#inicio', label: 'Inicio' },
-  { href: '/tienda', label: 'Tienda' },
-  { href: '/#acerca', label: 'Acerca de' },
+  { href: '/tienda', label: 'Tienda & Catálogo' },
+  { href: '/#acerca', label: 'Nicolás Cordero' },
+  { href: '/#valores', label: 'Origen & Mística' },
   { href: '/#contacto', label: 'Contacto' }
 ];
 
-// Ajusta el número de WhatsApp en la variable phoneLink
-const phoneLink = 'https://wa.me/56931983075';
+const phoneLink = 'https://wa.me/56931983075?text=Hola%20Nicol%C3%A1s,%20me%20gustar%C3%ADa%20consultar%20por%20tus%20joyas%20artesanales';
 ---
-<header class="fixed top-0 inset-x-0 z-30 backdrop-blur-md bg-white/70 border-b border-white/40">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="#inicio" class="flex items-center gap-2 group">
-      <div class="w-10 h-10 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-gold font-bold">
-        EJ
+<header class="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-[#FAF6F0]/85 border-b border-[#EBDDCB]/80 shadow-sm transition-all duration-300">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Brand / Logo -->
+    <a href="/#inicio" class="flex items-center gap-3 group">
+      <div class="relative w-12 h-12 rounded-2xl overflow-hidden border border-[#D4C3AE] shadow-sm bg-white/60 p-0.5 group-hover:scale-105 transition-transform duration-300">
+        <img 
+          src="/images/logo-watercolor.jpg" 
+          alt="Elqui Joyas Logo Acuarela" 
+          class="w-full h-full object-cover rounded-xl"
+        />
       </div>
       <div>
-        <p class="text-lg font-serif font-semibold leading-none">Elqui Joyas</p>
-        <p class="text-xs text-neutral-600">Arte en metal por Nicolás Cordero</p>
+        <span class="block text-2xl font-serif font-semibold text-ink-deep tracking-tight group-hover:text-emerald transition-colors">
+          Elqui Joyas
+        </span>
+        <span class="block text-[11px] font-sans uppercase tracking-[0.18em] text-ink-muted">
+          Orfebrería · Valle de Elqui
+        </span>
       </div>
     </a>
-    <nav class="hidden md:flex items-center gap-6">
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8">
       {links.map((link) => (
-        <a href={link.href} class="text-sm font-medium text-neutral-700 hover:text-gold transition">{link.label}</a>
+        <a 
+          href={link.href} 
+          class="text-sm font-medium text-ink-medium hover:text-emerald transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-emerald after:to-quartz after:transition-all hover:after:w-full"
+        >
+          {link.label}
+        </a>
       ))}
     </nav>
-    <a href={phoneLink} class="button-primary text-sm" target="_blank" rel="noopener noreferrer">
-      Escríbenos
-    </a>
+
+    <!-- Action Button -->
+    <div class="flex items-center gap-3">
+      <a 
+        href={phoneLink} 
+        class="button-primary !py-2.5 !px-5 text-xs sm:text-sm" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <span>✧</span> Escríbenos
+      </a>
+    </div>
   </div>
 </header>
 <div class="h-20"></div>

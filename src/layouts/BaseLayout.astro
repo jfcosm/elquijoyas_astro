@@ -2,10 +2,21 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { title = 'Elqui Joyas | Joyería artesanal en el Valle de Elqui', description = 'Joyas hechas a mano por Nicolás Cordero en Vicuña, Chile. Inspiradas en la naturaleza del Valle de Elqui.', ogImage = 'images/og-default.svg' } = Astro.props;
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Elqui Joyas | Orfebrería y Joyería de Autor en el Valle de Elqui',
+  description = 'Joyas de autor creadas a mano por Nicolás Cordero en Vicuña, Valle de Elqui. Cristales, plata, bronce e inspiración mística bajo los cielos del Mamalluca.',
+  ogImage = '/images/logo-watercolor.jpg'
+} = Astro.props;
 ---
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,12 +26,12 @@ const { title = 'Elqui Joyas | Joyería artesanal en el Valle de Elqui', descrip
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={ogImage} />
-    <meta name="theme-color" content="#c6a067" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="theme-color" content="#FAF6F0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col selection:bg-quartz-soft selection:text-ink-deep">
     <Header />
     <main class="flex-1">
       <slot />

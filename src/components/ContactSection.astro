@@ -59,9 +59,12 @@
           Cuéntanos tu Idea o Encargo Especial
         </h3>
         <p class="text-sm sm:text-base text-ink-medium leading-relaxed" id="contact-form-desc">
-          ¿Tienes en mente una joya personalizada, un anillo de compromiso o un regalo único con minerales del Valle de Elqui? Escríbenos y diseñamos juntos la pieza soñada.
+          ¿Tienes en mente una joya personalizada, un anillo de compromiso o un regalo único con minerales del Valle de Elqui? Escríbenos y coordinamos directamente la pieza perfecta.
         </p>
         <div class="pt-4 border-t border-[#EBDDCB] space-y-2 text-xs text-ink-muted">
+          <p class="flex items-center gap-2">
+            <span>💬</span> <strong>Atención directa:</strong> Tu mensaje se enviará al WhatsApp del taller de Nicolás.
+          </p>
           <p class="flex items-center gap-2">
             <span>⏱️</span> Respuesta habitual dentro del mismo día laboral.
           </p>
@@ -72,11 +75,11 @@
       </div>
 
       <div class="lg:col-span-7">
-        <form class="space-y-4" onsubmit="event.preventDefault(); window.open(`https://wa.me/56931983075?text=${encodeURIComponent('Hola Nicolás, me contacto desde la web. Mi nombre es ' + (document.getElementById('name') as HTMLInputElement)?.value + '. Mensaje: ' + (document.getElementById('message') as HTMLTextAreaElement)?.value)}`, '_blank');">
+        <form id="contact-whatsapp-form" class="space-y-4" data-whatsapp-phone="56931983075">
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" for="name">
-                Nombre Completo
+                Nombre Completo *
               </label>
               <input 
                 id="name" 
@@ -89,13 +92,12 @@
             </div>
             <div>
               <label class="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" for="email">
-                Correo Electrónico
+                Correo Electrónico (Opcional)
               </label>
               <input 
                 id="email" 
                 name="email" 
                 type="email" 
-                required 
                 placeholder="tu@correo.com"
                 class="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/80 px-4 py-3.5 text-sm text-ink-deep placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition"
               />
@@ -104,24 +106,24 @@
 
           <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-ink-muted mb-1.5" for="message">
-              ¿Qué pieza o consulta tienes en mente?
+              ¿Qué pieza o consulta tienes en mente? *
             </label>
             <textarea 
               id="message" 
               name="message" 
               rows="4" 
               required
-              placeholder="Cuéntanos el tipo de joya, metales o gemas de tu preferencia..."
+              placeholder="Cuéntanos qué diseño buscas, tipo de metales (plata, bronce), gemas de preferencia o fecha especial..."
               class="w-full rounded-2xl border border-[#E0CCB4] bg-[#FAF6F0]/80 px-4 py-3.5 text-sm text-ink-deep placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-emerald focus:bg-white transition"
             ></textarea>
           </div>
 
           <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
             <button type="submit" class="button-primary w-full sm:w-auto text-sm">
-              <span>✉️</span> Enviar Consulta Directa
+              <span>💬</span> Enviar Consulta por WhatsApp
             </button>
             <p class="text-[11px] text-ink-muted italic text-center sm:text-right">
-              Te responderemos a la brevedad por WhatsApp o correo.
+              Se abrirá WhatsApp con tu mensaje listo para conversar con Nicolás.
             </p>
           </div>
         </form>
@@ -129,3 +131,40 @@
     </div>
   </div>
 </section>
+
+<script>
+  // Manejo del formulario de contacto para generar mensaje personalizado de WhatsApp
+  const contactForm = document.getElementById('contact-whatsapp-form') as HTMLFormElement;
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('name') as HTMLInputElement;
+      const emailInput = document.getElementById('email') as HTMLInputElement;
+      const messageInput = document.getElementById('message') as HTMLTextAreaElement;
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      if (!name || !message) return;
+
+      // Obtener el teléfono configurado dinámicamente o el fallback
+      const phone = contactForm.getAttribute('data-whatsapp-phone') || '56931983075';
+
+      // Construir mensaje enriquecido y ordenado
+      let whatsappText = `✨ *Consulta desde la Web - Elqui Joyas* ✨\n\n`;
+      whatsappText += `👤 *Nombre:* ${name}\n`;
+      if (email) {
+        whatsappText += `📧 *Correo:* ${email}\n`;
+      }
+      whatsappText += `\n💍 *Idea o Consulta:*\n${message}\n\n`;
+      whatsappText += `_Enviado desde el formulario de elquijoyas.cl_`;
+
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappText)}`;
+
+      // Abrir en nueva pestaña
+      window.open(whatsappUrl, '_blank');
+    });
+  }
+</script>

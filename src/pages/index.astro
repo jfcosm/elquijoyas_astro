@@ -97,6 +97,8 @@ import FloatingInstagramButton from '../components/FloatingInstagramButton.tsx';
         const heroWhatsappBtn = document.getElementById('hero-whatsapp-btn') as HTMLAnchorElement;
         const instagramBtn = document.getElementById('contact-instagram-btn') as HTMLAnchorElement;
 
+        const contactForm = document.getElementById('contact-whatsapp-form') as HTMLFormElement;
+
         if (formTitle && data.title) formTitle.innerText = data.title;
         if (formDesc && data.description) formDesc.innerText = data.description;
         
@@ -104,6 +106,7 @@ import FloatingInstagramButton from '../components/FloatingInstagramButton.tsx';
           const waUrl = `https://wa.me/${data.whatsappPhone}`;
           if (whatsappBtn) whatsappBtn.href = waUrl;
           if (heroWhatsappBtn) heroWhatsappBtn.href = waUrl;
+          if (contactForm) contactForm.setAttribute('data-whatsapp-phone', data.whatsappPhone);
         }
         if (instagramBtn && data.instagramUrl) {
           instagramBtn.href = data.instagramUrl;

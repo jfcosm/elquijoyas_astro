@@ -1,6 +1,6 @@
 ---
 ---
-<footer class="bg-[#1F1A17] text-[#FAF6F0] py-16 mt-20 border-t border-[#3A312B] relative overflow-hidden">
+<footer class="bg-[#1F1A17] text-[#FAF6F0] pt-16 pb-8 mt-20 border-t border-[#3A312B] relative overflow-hidden">
   <!-- Subtle background glow -->
   <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald/10 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-terracotta/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -97,10 +97,29 @@
         </a>
       </div>
 
-      <div class="pt-2 flex items-center justify-between text-xs text-[#8A7B70]">
-        <span>© 2024 Elqui Joyas.</span>
-        <a href="/admin" class="hover:text-[#C5A059] transition-colors">Panel Admin 🔒</a>
+      <div class="pt-2">
+        <a href="/admin" class="text-xs text-[#8A7B70] hover:text-[#C5A059] transition-colors inline-flex items-center gap-1">
+          <span>🔒</span> Panel de Administración
+        </a>
       </div>
+    </div>
+  </div>
+
+  <!-- Sub-footer con créditos a MelodIA Lab -->
+  <div class="mt-12 pt-6 border-t border-[#3A312B] relative z-10">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A8988C]">
+      <p>© 2024 Elqui Joyas · Joyería de Autor en el Valle de Elqui.</p>
+      <p class="flex items-center gap-1.5 font-normal text-[#C4B5A5]">
+        Hecho con el amor ❤️ y la energía ⚡ de 
+        <a 
+          href="https://www.melodialab.net" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="text-[#FAF6F0] hover:text-[#C5A059] font-semibold underline underline-offset-4 decoration-[#C5A059]/60 hover:decoration-[#C5A059] transition-colors"
+        >
+          MelodIA Lab
+        </a>
+      </p>
     </div>
   </div>
 </footer>

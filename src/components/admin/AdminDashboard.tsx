@@ -630,6 +630,21 @@ const AdminDashboard: React.FC = () => {
             >
               <span>💍</span> Joyas (Catálogo)
             </button>
+
+            <div className="pt-2">
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-left px-4 py-3 rounded-2xl text-sm font-medium transition flex items-center justify-between text-ink-medium bg-emerald-light/30 hover:bg-emerald-light/70 border border-emerald/20 group"
+              >
+                <div className="flex items-center gap-3">
+                  <span>🌐</span>
+                  <span className="font-semibold text-emerald-dark">Ver Landing Page</span>
+                </div>
+                <span className="text-xs text-emerald group-hover:translate-x-0.5 transition-transform">↗</span>
+              </a>
+            </div>
           </nav>
         </div>
 

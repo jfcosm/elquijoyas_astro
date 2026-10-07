@@ -180,8 +180,8 @@ const InstagramReelsSection: React.FC = () => {
                     )}
 
                     {reel.tag && (
-                      <div className="absolute top-3 left-3 pointer-events-none">
-                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-emerald-dark shadow-sm border border-emerald/20">
+                      <div className="absolute bottom-3 right-3 pointer-events-none z-20">
+                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/95 backdrop-blur-md text-emerald-dark shadow-md border border-emerald/20">
                           {reel.tag}
                         </span>
                       </div>
